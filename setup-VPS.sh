@@ -1,6 +1,24 @@
 #!/bin/bash
 
-echo "[+]-------------------Instalando Ferramentas Go-------------------[+]"
+echo "[+]-------------------Install Update and Upgrade-------------------[+]"
+sudo apt update && sudo apt upgrade -y
+
+echo "[+]-------------------Install Python-------------------[+]"
+sudo apt install python3 -y && sudo apt install pip3 -y
+
+echo "[+]-------------------Install Rust-------------------[+]"
+sudo apt install cargo -y
+
+echo "[+]-------------------Install Go-------------------[+]"
+wget https://go.dev/dl/go1.19.5.linux-amd64.tar.gz
+tar -xvf go1.19.5.linux-amd64.tar.gz
+chown -R root:root ./go
+mv -v go /usr/local
+echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
+echo "export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin" >> ~/.profile
+source ~/.profile
+
+echo "[+]-------------------Install Tools Go-------------------[+]"
 go install -v github.com/tomnomnom/anew@latest
 go install -v github.com/tomnomnom/hacks/anti-burl@latest
 go install -v github.com/tomnomnom/assetfinder@latest
@@ -41,7 +59,55 @@ go install github.com/haccer/subjack@latest
 go install github.com/j3ssie/sdlookup@latest
 go install -v github.com/hakluke/haktrails@latest
 
-echo "[+]-------------------Instalando Ferramentas Pip e Snap-------------------[+]"
+echo "[+]-------------------Install Tools Pip and Snap-------------------[+]"
 pip3 install dnsgen
 pip3 install bhedak
 snap install amass
+
+echo "[+]-------------------Install Python Tools-------------------[+]"
+git clone https://github.com/GerbenJavado/LinkFinder.git
+cd LinkFinder
+python setup.py install
+pip3 install -r requirements.txt
+cd ..
+echo "[-]--------------------------------------[-]"
+git clone https://github.com/devanshbatham/ParamSpider
+cd ParamSpider
+pip3 install -r requirements.txt
+cd ..
+echo "[-]--------------------------------------[-]"
+git clone https://github.com/vladko312/SSTImap
+cd SSTImap
+pip3 install -r requirements.txt
+cd ..
+echo "[-]--------------------------------------[-]"
+git clone https://github.com/m4ll0k/SecretFinder
+cd SecretFinder
+pip3 install -r requirements.txt
+cd ..
+echo "[-]--------------------------------------[-]"
+git clone https://github.com/s0md3v/XSStrike
+cd XSStrike
+pip3 install -r requirements.txt
+cd ..
+echo "[-]--------------------------------------[-]"
+git clone https://github.com/m4ll0k/takeover.git
+cd takeover
+python3 setup.py install
+cd ..
+
+echo "[+]-------------------Install C++ Tool-------------------[+]"
+git clone https://github.com/ameenmaali/urldedupe.git
+cd urldedupe
+cmake CMakeLists.txt
+make
+mv urldedupe /usr/bin
+
+echo "[+]-------------------Add Go Tools to Path-------------------[+]"
+mv ~/go/bin/* /usr/bin
+
+echo "[+]-------------------Create Folder Tools for Python Tools-------------------[+]"
+mkdir ~/Tools
+mv XSStrike takeover SecretFinder SSTImap ParamSpider LinkFinder ~/Tools
+
+echo "[+]-------------------Finished-------------------[+]"
