@@ -61,6 +61,7 @@ go install -v github.com/hakluke/haktrails@latest
 
 echo "[+]-------------------Install Tools Pip and Snap-------------------[+]"
 pip3 install dnsgen
+pip3 install uro
 pip3 install bhedak
 snap install amass
 
