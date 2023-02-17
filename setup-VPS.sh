@@ -63,6 +63,7 @@ echo "[+]-------------------Install Tools Pip and Snap-------------------[+]"
 pip3 install dnsgen
 pip3 install uro
 pip3 install bhedak
+pip3 install arjun
 snap install amass
 
 echo "[+]-------------------Install Python Tools-------------------[+]"
