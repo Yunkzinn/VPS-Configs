@@ -116,4 +116,9 @@ mv XSStrike takeover SecretFinder SSTImap ParamSpider LinkFinder ~/Tools
 echo "[+]-------------------Create Default Folders-------------------[+]"
 mkdir ~/bugbounty; mkdir ~/my-scripts; mkdir ~/wordlists
 
+echo "[+]-------------------Git CLone-------------------[+]"
+git clone https://github.com/projectdiscovery/fuzzing-templates
+git clone https://github.com/danielmiessler/SecLists
+mv SecLists/* ~/wordlists
+
 echo "[+]-------------------Finished-------------------[+]"
