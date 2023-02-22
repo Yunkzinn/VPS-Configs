@@ -113,4 +113,7 @@ echo "[+]-------------------Create Folder Tools for Python Tools----------------
 mkdir ~/Tools
 mv XSStrike takeover SecretFinder SSTImap ParamSpider LinkFinder ~/Tools
 
+echo "[+]-------------------Create Default Folders-------------------[+]"
+mkdir ~/bugbounty; mkdir ~/my-scripts; mkdir ~/wordlists
+
 echo "[+]-------------------Finished-------------------[+]"
