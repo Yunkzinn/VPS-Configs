@@ -59,6 +59,7 @@ go install github.com/haccer/subjack@latest
 go install github.com/j3ssie/sdlookup@latest
 go install -v github.com/hakluke/haktrails@latest
 go install -v github.com/hueristiq/hqurlfind3r/v2/cmd/hqurlfind3r@latest
+go install -v github.com/xm1k3/cent@latest
 
 echo "[+]-------------------Install Tools Pip and Snap-------------------[+]"
 pip3 install dnsgen
