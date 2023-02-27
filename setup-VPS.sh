@@ -112,6 +112,9 @@ pip3 install -r requirements.txt
 cd..
 echo "[-]--------------------------------------[-]"
 git clone https://github.com/Synacktiv/eos
+cd eos
+python3 -m pip install --user ./eos
+cd ..
 
 echo "[+]-------------------Install C++ Tool-------------------[+]"
 git clone https://github.com/ameenmaali/urldedupe.git
