@@ -11,6 +11,7 @@ sudo apt install cargo -y
 
 echo "[+]-------------------Install Make-------------------[+]"
 apt install make -y
+apt install make -y
 
 echo "[+]-------------------Install Go-------------------[+]"
 wget https://go.dev/dl/go1.19.5.linux-amd64.tar.gz
