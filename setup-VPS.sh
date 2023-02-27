@@ -9,6 +9,9 @@ sudo apt install python3 -y && sudo apt install pip3 -y
 echo "[+]-------------------Install Rust-------------------[+]"
 sudo apt install cargo -y
 
+echo "[+]-------------------Install Make-------------------[+]"
+apt install make -y
+
 echo "[+]-------------------Install Go-------------------[+]"
 wget https://go.dev/dl/go1.19.5.linux-amd64.tar.gz
 tar -xvf go1.19.5.linux-amd64.tar.gz
