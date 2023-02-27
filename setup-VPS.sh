@@ -99,6 +99,18 @@ git clone https://github.com/m4ll0k/takeover.git
 cd takeover
 python3 setup.py install
 cd ..
+echo "[-]--------------------------------------[-]"
+git clone https://github.com/guelfoweb/knock.git
+cd knock
+pip3 install -r requirements.txt
+cd ..
+echo "[-]--------------------------------------[-]"
+git clone https://github.com/gwen001/github-search
+cd github-search
+pip3 install -r requirements.txt
+cd..
+echo "[-]--------------------------------------[-]"
+git clone https://github.com/Synacktiv/eos
 
 echo "[+]-------------------Install C++ Tool-------------------[+]"
 git clone https://github.com/ameenmaali/urldedupe.git
@@ -106,13 +118,21 @@ cd urldedupe
 cmake CMakeLists.txt
 make
 mv urldedupe /usr/bin
+cd ..
+
+echo "[+]-------------------Install Rust Tool-------------------[+]"
+git clone https://github.com/findomain/findomain.git
+cd findomain
+cargo build --release
+cp target/release/findomain /usr/bin/
+cd ..
 
 echo "[+]-------------------Add Go Tools to Path-------------------[+]"
 mv ~/go/bin/* /usr/bin
 
 echo "[+]-------------------Create Folder Tools for Python Tools-------------------[+]"
 mkdir ~/Tools
-mv XSStrike takeover SecretFinder SSTImap ParamSpider LinkFinder ~/Tools
+mv XSStrike takeover SecretFinder SSTImap ParamSpider LinkFinder knock github-search eos ~/Tools
 
 echo "[+]-------------------Create Default Folders-------------------[+]"
 mkdir ~/bugbounty; mkdir ~/my-scripts; mkdir ~/wordlists
