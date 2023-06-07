@@ -2,6 +2,8 @@
 
 echo "[+]-------------------Install Update and Upgrade-------------------[+]"
 sudo apt update && sudo apt upgrade -y
+apt install snap -y
+apt install python3-pip -y 
 
 echo "[+]-------------------Install Python-------------------[+]"
 sudo apt install python3 -y && sudo apt install pip3 -y
@@ -15,8 +17,8 @@ apt install cmake -y
 apt-get install -y build-essential
 
 echo "[+]-------------------Install Go-------------------[+]"
-wget https://go.dev/dl/go1.19.5.linux-amd64.tar.gz
-tar -xvf go1.19.5.linux-amd64.tar.gz
+wget https://go.dev/dl/go1.20.linux-amd64.tar.gz
+tar -xvf go1.20.linux-amd64.tar.gz
 chown -R root:root ./go
 mv -v go /usr/local
 echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
